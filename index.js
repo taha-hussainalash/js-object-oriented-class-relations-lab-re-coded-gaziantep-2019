@@ -10,20 +10,21 @@ class Driver {
     this.id=++driverId;
     store.drivers.push(this);
   }
-trips(){return store.trips.filter(
+  
+         trips(){return store.trips.filter(
             function(item) {
                 return item.driverId === this.id;
             }.bind(this)
         );
-}
-passengers(){return store.passengers.find(
+       }
+          passengers(){return store.passengers.find(
             function(item) {
                 return item.id === this.passengerId;
             }.bind(this)
-        );
+            );
 
-   }
-}
+           }
+         }
 class Passenger {
   constructor(name){
     this.name=name;
@@ -38,12 +39,12 @@ class Passenger {
         );
 }
 
-   drivers(){
+        drivers(){
 
-   }
-}
+         }
+        }
 
- class Trip {
+class Trip {
   constructor(driver,passenger){
     this.driverId=driver;
     this.passengerId=passenger;
@@ -53,14 +54,14 @@ class Passenger {
     store.trips.push(this);
   }
 
-   driver(){return store.trips.filter(
+       driver(){return store.trips.filter(
             function(item) {
                 return item.driverId === this.id;
             }.bind(this)
-        );
+               );
 
-   }
+              }
 
-   passengers(){
+        passengers(){
 
-   }
+          }
