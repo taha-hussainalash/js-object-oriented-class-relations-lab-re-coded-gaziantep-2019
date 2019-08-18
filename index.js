@@ -11,13 +11,13 @@ class Driver {
     store.drivers.push(this);
   }
   
-         trips(){return store.trips.filter(
+         trips() {return store.trips.filter(
             function(item) {
                 return item.driverId === this.id;
             }.bind(this)
         );
        }
-          passengers(){return store.passengers.find(
+          passengers() {return store.passengers.find(
             function(item) {
                 return item.id === this.passengerId;
             }.bind(this)
