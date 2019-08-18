@@ -26,31 +26,31 @@ class Driver {
            }
          }
 class Passenger {
-  constructor(name){
-    this.name=name;
-    this.id=++passengerId;
+     constructor(name){
+         this.name=name;
+         this.id=++passengerId;
     store.passengers.push(this);
   }
 
-   trips(){return store.trips.filter(
+   trips() {return store.trips.filter(
             function(item) {
                 return item.passengerId === this.id;
             }.bind(this)
         );
 }
 
-        drivers(){
+        drivers() {
 
          }
         }
 
 class Trip {
   constructor(driver,passenger){
-    this.driverId=driver;
-    this.passengerId=passenger;
-    this.id=++tripId;
-    this.passengerId=passenger.id;
-    this.driverId=driver.id;
+         this.driverId=driver;
+         this.passengerId=passenger;
+         this.id=++tripId;
+         this.passengerId=passenger.id;
+         this.driverId=driver.id;
     store.trips.push(this);
   }
 
@@ -65,3 +65,5 @@ class Trip {
         passengers(){
 
           }
+  
+}
